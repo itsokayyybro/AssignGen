@@ -5,6 +5,27 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/stars/itsokayyybro/AssignGen?style=for-the-badge&logo=github&color=yellow" alt="Stars">
+  <img src="https://img.shields.io/github/forks/itsokayyybro/AssignGen?style=for-the-badge&logo=github&color=blue" alt="Forks">
+  <img src="https://img.shields.io/github/watchers/itsokayyybro/AssignGen?style=for-the-badge&logo=github&color=green" alt="Watchers">
+  <img src="https://img.shields.io/github/license/itsokayyybro/AssignGen?style=for-the-badge&color=orange" alt="License">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/itsokayyybro/AssignGen?style=for-the-badge&logo=git&color=purple" alt="Last Commit">
+  <img src="https://img.shields.io/github/repo-size/itsokayyybro/AssignGen?style=for-the-badge&logo=github&color=teal" alt="Repo Size">
+  <img src="https://img.shields.io/github/issues/itsokayyybro/AssignGen?style=for-the-badge&logo=github&color=red" alt="Issues">
+  <img src="https://img.shields.io/github/issues-pr/itsokayyybro/AssignGen?style=for-the-badge&logo=github&color=cyan" alt="Pull Requests">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
+  <img src="https://img.shields.io/badge/C%23-.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="C#">
+  <img src="https://img.shields.io/badge/Word-Document-2B579A?style=for-the-badge&logo=microsoftword&logoColor=white" alt="Word">
+</p>
+
+<p align="center">
   <a href="#features">Features</a> •
   <a href="#supported-languages">Languages</a> •
   <a href="#installation">Installation</a> •
