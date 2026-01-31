@@ -7,9 +7,32 @@ from capture_runner import capture_program_output
 from doc_builder import build_document
 
 
+OUTPUT_DIR = Path("WordDocuments")
+
+
 def run_pipeline(assignment_path: Path):
+    # ---- Ask user for document name ----
+    doc_name = input(
+        "\nEnter name for the Word document (without .docx): "
+    ).strip()
+
+    if not doc_name:
+        print("❌ Document name cannot be empty.")
+        sys.exit(1)
+
+    # ---- Create output directory if not exists ----
+    OUTPUT_DIR.mkdir(exist_ok=True)
+
+    output_doc_path = OUTPUT_DIR / f"{doc_name}.docx"
+
+    # ---- Scan assignment ----
     programs = scan_assignment(str(assignment_path))
 
+    if not programs:
+        print("❌ No valid C# assignment found.")
+        sys.exit(1)
+
+    # ---- Execute programs ----
     for program in programs:
         executor_cls = EXECUTOR_REGISTRY[program["language"]]
         executor = executor_cls(program)
@@ -19,10 +42,11 @@ def run_pipeline(assignment_path: Path):
 
         capture_program_output(program)
 
-    output_doc = assignment_path.name + ".docx"
-    build_document(programs, output_path=output_doc)
+    # ---- Build Word document ----
+    build_document(programs, output_path=output_doc_path)
 
-    print(f"\n✅ Generated: {output_doc}")
+    print(f"\n✅ Document generated successfully:")
+    print(f"📄 {output_doc_path.resolve()}")
 
 
 def main():
@@ -33,7 +57,7 @@ def main():
     assignment_path = Path(sys.argv[1]).resolve()
 
     if not assignment_path.exists():
-        print(f"❌ Folder not found: {assignment_path}")
+        print(f"❌ Assignment folder not found: {assignment_path}")
         sys.exit(1)
 
     run_pipeline(assignment_path)

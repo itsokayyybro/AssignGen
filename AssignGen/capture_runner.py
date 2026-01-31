@@ -2,7 +2,7 @@ from pathlib import Path
 from output_capture import render_output_to_image
 
 
-def capture_program_output(program, output_dir="outputs"):
+def capture_program_output(program, output_dir="Generated_Outputs"):
     Path(output_dir).mkdir(exist_ok=True)
 
     image_path = Path(output_dir) / f"{program['name']}_output.png"
